@@ -68,6 +68,7 @@ public class EnemyManager : MonoBehaviour
     {
         if (healt <= 0)
         {
+            DataManager.Instance.EnemyKilled++;
             Destroy(gameObject);
         }
     }
