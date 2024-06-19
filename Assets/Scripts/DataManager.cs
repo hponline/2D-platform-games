@@ -58,6 +58,7 @@ public class DataManager : MonoBehaviour
         {
             enemyKilled = value;
             GameObject.Find("EnemyKilledText").GetComponent<Text>().text = "ENEMY KILLED : " + enemyKilled.ToString();
+            WinProcess();
         }
     }
 
@@ -90,5 +91,18 @@ public class DataManager : MonoBehaviour
         }
         // Her bastýgýmýzda eski verileri üzerine yüklüyor düzeltilecek
 
+    }
+
+    public void WinProcess()
+    {
+        if (enemyKilled >= 5)
+        {
+            print("kazandýnýz");
+        }
+    }
+
+    public void LoseProcess()
+    {
+        print("Kaybettin");
     }
 }

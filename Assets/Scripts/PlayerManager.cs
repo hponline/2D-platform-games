@@ -12,7 +12,7 @@ public class PlayerManager : MonoBehaviour
 
     Transform muzzle;
 
-    public Transform bullet, floatingText;
+    public Transform bullet, floatingText, bloodParticle;
     public Slider slider;
 
     bool mouseIsNotOverUI;
@@ -56,16 +56,19 @@ public class PlayerManager : MonoBehaviour
         AmIDead();
     }
 
-    void AmIDead() 
+    public void AmIDead() 
     {
         if (healt <=0)
         {
+            Destroy(Instantiate(bloodParticle, transform.position, Quaternion.identity),3f);
+            DataManager.Instance.LoseProcess();
             dead = true;
+            Destroy(gameObject);
         }
     }
 
     // Ateþ etme
-    void ShootBullet()
+    public void ShootBullet()
     {
         Transform tempBullet;
         tempBullet = Instantiate(bullet, muzzle.position, Quaternion.identity);
@@ -73,4 +76,6 @@ public class PlayerManager : MonoBehaviour
 
         DataManager.Instance.ShotBullet++;
     }
+
+    
 }

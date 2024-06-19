@@ -31,6 +31,7 @@ public class EnemyManager : MonoBehaviour
         {
             colliderBusy = true;
             other.GetComponent<PlayerManager>().GetDamage(damage);
+            GetComponent<SpriteRenderer>().color = Color.white;
         }
         else if (other.CompareTag("Bullet"))
         {
