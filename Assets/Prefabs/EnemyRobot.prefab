@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1143878006575253430}
   - component: {fileID: 791296521761323213}
   - component: {fileID: 778244766446118629}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyRobot
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 7182762225280915674}
   - component: {fileID: 6390357034842196868}
   - component: {fileID: 643481821324337857}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -307,6 +307,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealtBar
       objectReference: {fileID: 0}
+    - target: {fileID: 186532939646807520, guid: 0e66a5dcb2e0676478e34284a773e163, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1025958375494807306, guid: 0e66a5dcb2e0676478e34284a773e163, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -386,6 +390,14 @@ PrefabInstance:
     - target: {fileID: 1025958375494807306, guid: 0e66a5dcb2e0676478e34284a773e163, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1385982700140305614, guid: 0e66a5dcb2e0676478e34284a773e163, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2367279039310771344, guid: 0e66a5dcb2e0676478e34284a773e163, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2661748905167051498, guid: 0e66a5dcb2e0676478e34284a773e163, type: 3}
       propertyPath: m_AnchorMax.x
