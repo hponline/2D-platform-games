@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjeManager : MonoBehaviour
+public class HiddenPlatform: MonoBehaviour
 {
     public GameObject sutun;
     
