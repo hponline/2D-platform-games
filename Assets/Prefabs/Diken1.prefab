@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2342209820178052929}
   - component: {fileID: 8227785157840136622}
   - component: {fileID: 945577999962278383}
-  m_Layer: 8
+  - component: {fileID: -4906795261305045549}
+  m_Layer: 0
   m_Name: Diken1
-  m_TagString: Bullet
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,3 +135,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: -350
+--- !u!114 &-4906795261305045549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7182106661302279401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82074707333d0074a8c9a00cdf38ef8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healt: 0
+  damage: 100
+  slider: {fileID: 0}

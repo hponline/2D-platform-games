@@ -9,13 +9,14 @@ public class EnemyManager : MonoBehaviour
     public float damage;
 
     bool colliderBusy = false;
-
+     
     public Slider slider;
     // Start is called before the first frame update
     void Start()
     {
         slider.maxValue = healt;
         slider.value = healt;
+                
     }
 
     // Update is called once per frame
@@ -69,8 +70,8 @@ public class EnemyManager : MonoBehaviour
     {
         if (healt <= 0)
         {
-            DataManager.Instance.EnemyKilled++;
-            Destroy(gameObject);
+            //DataManager.Instance.EnemyKilled++;
+            Destroy(gameObject);                       
         }
     }
 }
