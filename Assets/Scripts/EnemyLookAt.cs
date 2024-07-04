@@ -10,18 +10,16 @@ public class EnemyLookAt : MonoBehaviour
 
     public void LookAtPlayer()
     {
-        
-
         // Oyuncu boss'un saginda ise
         if (transform.position.x > player.position.x)
         {
-            
+
             spriteRenderer.flipX = true;
         }
 
         else if (transform.position.x < player.position.x)
         {
-            
+
             spriteRenderer.flipX = false;
         }
     }

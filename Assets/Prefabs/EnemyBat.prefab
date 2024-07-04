@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 5799905003677913801}
   - component: {fileID: 225733655912384329}
   - component: {fileID: 6733689412739183205}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyBat
   m_TagString: Enemy
   m_Icon: {fileID: 0}

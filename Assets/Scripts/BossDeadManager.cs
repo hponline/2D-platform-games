@@ -1,39 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Timeline;
 using UnityEngine.UI;
 
-public class EnemyManager : MonoBehaviour
+public class BossDeadManager: MonoBehaviour
 {
     public float healt;
     public float damage;
 
-    bool colliderBusy = false;
+    public LayerMask attackMask;
+    public float attackRadius;
+    
+    public int attackDamage = 20;
 
+    
+    public Transform attackPoint;
+
+    Animator animator;
     public Slider slider;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         slider.maxValue = healt;
         slider.value = healt;
+
         
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    
 
 
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Collider'e ilk giriþi sayma -- sürekli algýlamamasý için
-        if (other.CompareTag("Player") && !colliderBusy)
-        {
-            colliderBusy = true;
+        if (other.CompareTag("Player"))
+        {            
             other.GetComponent<PlayerManager>().GetDamage(damage);
             GetComponent<SpriteRenderer>().color = Color.white;
         }
@@ -45,14 +50,7 @@ public class EnemyManager : MonoBehaviour
 
     }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            colliderBusy = false;
-        }
-    }
-
+  
     // Damage alma
     public void GetDamage(float damage)
     {
@@ -74,10 +72,32 @@ public class EnemyManager : MonoBehaviour
     {
         if (healt <= 0)
         {
+
+            animator.SetTrigger("isDead");
             
-            //DataManager.Instance.EnemyKilled++;
-            Destroy(gameObject);
+            Destroy(gameObject,2.5f);
+        }        
+    }
+
+    
+
+    public void Attack()
+    {
+        
+        Collider2D colInfo = Physics2D.OverlapCircle(attackPoint.position, attackRadius, attackMask);
+
+        if (colInfo != null)
+        {
+            colInfo.GetComponent<PlayerManager>().GetDamage(attackDamage);
+        }
+    }
+
+    // boss attack pozisyon/alan gizmosu
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null) return;
+        {
+            Gizmos.DrawWireSphere(attackPoint.position, attackRadius);
         }
     }
 }
-

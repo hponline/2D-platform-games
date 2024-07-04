@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 7790621768826497716}
   - component: {fileID: 3444172942938334320}
   - component: {fileID: 3066718571591217701}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: "EnemyS\xFCm\xFCk"
   m_TagString: Enemy
   m_Icon: {fileID: 0}
