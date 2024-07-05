@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     {
         playerRb = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
+        DontDestroyOnLoad(gameObject);
     }
 
     

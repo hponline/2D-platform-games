@@ -399,7 +399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &18962243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -413,6 +413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healt: 100
+  maxHealt: 0
   bulletSpeed: 400
   bullet: {fileID: 6608198605073900378, guid: 387ff1a06cebb0c4297dd36ac6b417ee, type: 3}
   floatingText: {fileID: 2510999575815054750, guid: f948c4dbbb3017647b46ccc517f1664b, type: 3}
@@ -1195,7 +1196,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -1552,11 +1553,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2661748905167051498, guid: 0e66a5dcb2e0676478e34284a773e163, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2661748905167051498, guid: 0e66a5dcb2e0676478e34284a773e163, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1763,6 +1764,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 699337175}
   - {fileID: 595191315}
   - {fileID: 68316660}
   m_Father: {fileID: 0}
@@ -3878,7 +3880,7 @@ GameObject:
   - component: {fileID: 699337173}
   - component: {fileID: 699337172}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3955,17 +3957,17 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 699337171}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.13131276}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1008708822}
   - {fileID: 1184462632}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 163278701}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.32, y: -0.32}
+  m_AnchoredPosition: {x: -15.089445, y: -3.0644908}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &702974907
@@ -9888,7 +9890,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1922339207
 Transform:
   m_ObjectHideFlags: 0
@@ -11053,7 +11055,6 @@ SceneRoots:
   - {fileID: 885699351}
   - {fileID: 87224090}
   - {fileID: 1915794746}
-  - {fileID: 699337175}
   - {fileID: 1922339207}
   - {fileID: 178100943}
   - {fileID: 163278701}
