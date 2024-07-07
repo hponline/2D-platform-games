@@ -19,20 +19,21 @@ public class Timer : MonoBehaviour
 
         
     }
-
     void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
-        DontDestroyOnLoad(gameObject);
+
     }
+
+
 
     void Update()
     {

@@ -8,6 +8,11 @@ public class EnemyLookAt : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
 
+    private void Start()
+    {
+        
+    }
+
     public void LookAtPlayer()
     {
         // Oyuncu boss'un saginda ise

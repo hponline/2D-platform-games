@@ -9,7 +9,7 @@ public class PlayerManager : MonoBehaviour
 {
     public float healt, bulletSpeed;
     
-    bool dead = false;
+    public static bool dead = false;
 
     Transform muzzle;
 
@@ -19,16 +19,23 @@ public class PlayerManager : MonoBehaviour
     bool mouseIsNotOverUI;
 
     
+    PlayerController zýplama;
+
     // Start is called before the first frame update
     void Start()
     {
         muzzle = transform.GetChild(1);
         slider.maxValue = healt;
         slider.value = healt;
+        
         DontDestroyOnLoad(gameObject);
     }
 
     
+
+
+
+
 
     // Update is called once per frame
     void Update()
@@ -41,6 +48,8 @@ public class PlayerManager : MonoBehaviour
         {
             ShootBullet();
         }
+
+        
 
     }
 
@@ -68,13 +77,8 @@ public class PlayerManager : MonoBehaviour
             dead = true;
             Destroy(Instantiate(bloodParticle, transform.position, Quaternion.identity),3f);
             DataManager.Instance.LoseProcess();
-
-            //Destroy(gameObject);
-            Invoke("DestroySelf", 1f);
-            
-            Invoke("ResetScene", 1f);
-            
-
+                        
+            Invoke("ResetScene", 0.1f);
         }
     }
 
@@ -90,13 +94,34 @@ public class PlayerManager : MonoBehaviour
 
     public void ResetScene()
     {
-        string currentSceneName = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(currentSceneName);
+        StartCoroutine(ResetSceneCoroutine());
     }
 
-    private void DestroySelf()
+    // Death spawn
+    private IEnumerator ResetSceneCoroutine()
     {
-        Destroy(gameObject);
-        
+        string currentSceneName = SceneManager.GetActiveScene().name;
+
+        // Sahneyi yeniden yükle
+        SceneManager.LoadScene(currentSceneName);
+
+        // Sahne yeniden yüklendikten sonra biraz bekle
+        yield return new WaitForSeconds(0.1f);
+
+        // StartPos pozisyonunu bul
+        GameObject spawnPoint = GameObject.Find("StartPos");
+        if (spawnPoint != null)
+        {            
+            // Karakter caný 0 olursa StartPos objesi pozisyonundan yeniden baþlar    
+            transform.position = spawnPoint.transform.position;
+            healt += 100;
+            slider.value = healt;
+            dead = false;
+            zýplama.nextJumpTime = 0;
+        }
+        else
+        {
+            Debug.LogError("Karakter yükleme hatasý");
+        }
     }
 }

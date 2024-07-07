@@ -19,12 +19,15 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheckPosition;
     public float groundCheckRadius;
     public LayerMask groundCheckLayer;
+
     
+
+
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
-        DontDestroyOnLoad(gameObject);
+        
     }
 
     
@@ -52,9 +55,16 @@ public class PlayerController : MonoBehaviour
         // Karakter zemine düþerse sahne resetler
         if (playerPos.transform.position.y < yBorder)
         {
-            // Sahneyi yeniden yükle
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Invoke("WaitSecond", 1);
+            
         }
+    }
+
+    // Sahneyi yeniden yükle
+    void WaitSecond()
+    {
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(currentSceneName);
     }
        
 
@@ -101,4 +111,5 @@ public class PlayerController : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().color = Color.white;
     }
+
 }
