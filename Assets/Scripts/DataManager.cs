@@ -14,7 +14,7 @@ public class DataManager : MonoBehaviour
     public int totalShotBullet;
 
     EasyFileSave myFile;
-    
+    /*
     void Awake()
     {
         if (Instance == null)
@@ -28,7 +28,7 @@ public class DataManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
     }
-
+    */
     // Update is called once per frame
     void Update()
     {

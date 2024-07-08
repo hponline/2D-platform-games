@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
+    public static PlayerManager Instance;
     public float healt, bulletSpeed;
     
     public static bool dead = false;
@@ -19,7 +20,7 @@ public class PlayerManager : MonoBehaviour
     bool mouseIsNotOverUI;
 
     
-    PlayerController zýplama;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,7 @@ public class PlayerManager : MonoBehaviour
         slider.maxValue = healt;
         slider.value = healt;
         
-        DontDestroyOnLoad(gameObject);
+        
     }
 
     
@@ -76,9 +77,12 @@ public class PlayerManager : MonoBehaviour
         {
             dead = true;
             Destroy(Instantiate(bloodParticle, transform.position, Quaternion.identity),3f);
-            DataManager.Instance.LoseProcess();
-                        
-            Invoke("ResetScene", 0.1f);
+            //DataManager.Instance.LoseProcess();
+            string currentSceneName = SceneManager.GetActiveScene().name;
+
+            // Sahneyi yeniden yükle
+            SceneManager.LoadScene(currentSceneName);
+            //Invoke("ResetScene", 0.1f);
         }
     }
 
@@ -89,7 +93,7 @@ public class PlayerManager : MonoBehaviour
         tempBullet = Instantiate(bullet, muzzle.position, Quaternion.identity);
         tempBullet.GetComponent<Rigidbody2D>().AddForce(muzzle.forward * bulletSpeed);
 
-        DataManager.Instance.ShotBullet++;
+        //DataManager.Instance.ShotBullet++;
     }
 
     public void ResetScene()
@@ -98,7 +102,7 @@ public class PlayerManager : MonoBehaviour
     }
 
     // Death spawn
-    private IEnumerator ResetSceneCoroutine()
+    public IEnumerator ResetSceneCoroutine()
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
 
@@ -117,7 +121,7 @@ public class PlayerManager : MonoBehaviour
             healt += 100;
             slider.value = healt;
             dead = false;
-            zýplama.nextJumpTime = 0;
+            
         }
         else
         {

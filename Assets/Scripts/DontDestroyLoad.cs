@@ -2,11 +2,19 @@ using UnityEngine;
 
 public class DontDestroyLoad : MonoBehaviour
 {
-    
-    void Start()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
+    public static DontDestroyLoad Instance;
 
-    
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 }
+

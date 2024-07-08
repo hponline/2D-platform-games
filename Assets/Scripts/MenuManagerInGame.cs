@@ -7,6 +7,8 @@ public class MenuManagerInGame : MonoBehaviour
 {
     public GameObject inGameScreen, pauseScreen;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,14 +37,15 @@ public class MenuManagerInGame : MonoBehaviour
 
     public void ReplayButton()
     {
+        string currentSceneName = SceneManager.GetActiveScene().name;
         Time.timeScale = 1;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(currentSceneName);
     }
 
     public void HomeButton()
     {
         Time.timeScale = 1;
-        DataManager.Instance.SaveData();
+        //DataManager.Instance.SaveData();
         SceneManager.LoadScene(0);
     }
 

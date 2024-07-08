@@ -19,6 +19,7 @@ public class Timer : MonoBehaviour
 
         
     }
+    /*
     void Awake()
     {
         if (Instance == null)
@@ -32,7 +33,7 @@ public class Timer : MonoBehaviour
         }
 
     }
-
+    */
 
 
     void Update()

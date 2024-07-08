@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6608198605073900378}
   - component: {fileID: 2342209820178052929}
   - component: {fileID: 8227785157840136622}
-  - component: {fileID: 945577999962278383}
   - component: {fileID: -4906795261305045549}
   m_Layer: 0
   m_Name: Diken1
@@ -122,19 +121,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.58
---- !u!114 &945577999962278383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7182106661302279401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6045f0a562eaaf1439ae6398782d0e65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turnSpeed: -350
 --- !u!114 &-4906795261305045549
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 1.0f;
     public float jumpSpeed = 1.0f, jumpFrequency = 1.0f ,nextJumpTime;
 
-    public float yBorder = -50.0f;
 
     bool facingRight = true;
     public bool isGround = false;
@@ -52,20 +51,10 @@ public class PlayerController : MonoBehaviour
             jump();
         }
 
-        // Karakter zemine düþerse sahne resetler
-        if (playerPos.transform.position.y < yBorder)
-        {
-            Invoke("WaitSecond", 1);
-            
-        }
+        
     }
 
-    // Sahneyi yeniden yükle
-    void WaitSecond()
-    {
-        string currentSceneName = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(currentSceneName);
-    }
+    
        
 
     // Yana hareket
