@@ -5,13 +5,7 @@ using UnityEngine;
 public class EnemyLookAt : MonoBehaviour
 {
     public Transform player;
-
     public SpriteRenderer spriteRenderer;
-
-    private void Start()
-    {
-        
-    }
 
     public void LookAtPlayer()
     {

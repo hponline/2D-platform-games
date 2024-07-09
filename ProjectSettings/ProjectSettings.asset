@@ -723,11 +723,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: 2D platform
   metroPackageVersion: 
-  metroCertificatePath: 
+  metroCertificatePath: Assets/WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: DefaultCompany
+  metroCertificateIssuer: DefaultCompany
+  metroCertificateNotAfter: 00150b204bf1db01
   metroApplicationDescription: 2D platform
   wsaImages: {}
   metroTileShortName: 

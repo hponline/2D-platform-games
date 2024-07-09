@@ -7,20 +7,6 @@ public class MenuManagerInGame : MonoBehaviour
 {
     public GameObject inGameScreen, pauseScreen;
 
-    
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void PauseButton()
     {
         Time.timeScale = 0;
@@ -37,17 +23,15 @@ public class MenuManagerInGame : MonoBehaviour
 
     public void ReplayButton()
     {
-        string currentSceneName = SceneManager.GetActiveScene().name;
         Time.timeScale = 1;
+
+        string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
     }
 
     public void HomeButton()
     {
         Time.timeScale = 1;
-        //DataManager.Instance.SaveData();
         SceneManager.LoadScene(0);
     }
-
-
 }

@@ -13,28 +13,9 @@ public class Timer : MonoBehaviour
 
 
     void Start()
-    {
-        DontDestroyOnLoad(gameObject);
-        timeIsRunnig = true;
-
-        
+    {        
+        timeIsRunnig = true;        
     }
-    /*
-    void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-
-    }
-    */
-
 
     void Update()
     {
@@ -55,5 +36,11 @@ public class Timer : MonoBehaviour
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
         timeText.text = string.Format("{0:00} : {1:00}", minutes, seconds);
+    }
+
+    public void ResetTimer()
+    {
+        timeRemaining = 0;
+        timeIsRunnig = true;
     }
 }

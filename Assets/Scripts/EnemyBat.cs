@@ -32,8 +32,5 @@ public class EnemyBat : MonoBehaviour
         Vector3 lookDirection = (player.transform.position - transform.position).normalized * Time.deltaTime;
         enemyRb.AddForce(lookDirection * speed);
         
-
-    }
-
-    
+    }        
 }

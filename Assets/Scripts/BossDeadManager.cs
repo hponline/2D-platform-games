@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Timeline;
 using UnityEngine.UI;
 
@@ -8,31 +9,24 @@ public class BossDeadManager: MonoBehaviour
 {
     public float healt;
     public float damage;
-
     public LayerMask attackMask;
     public float attackRadius;
-    
-    public int attackDamage = 20;
-
-    
+    public int attackDamage = 20;    
     public Transform attackPoint;
 
     Animator animator;
     public Slider slider;
+    public GameObject FinishScreen;
+    
 
-
+    
     void Start()
     {
         slider.maxValue = healt;
         slider.value = healt;
-
-        
+                
         animator = GetComponent<Animator>();
     }
-
-    
-
-
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -47,9 +41,7 @@ public class BossDeadManager: MonoBehaviour
             GetDamage(other.GetComponent<BulletManager>().bulletDamage);
             Destroy(other.gameObject);
         }
-
     }
-
   
     // Damage alma
     public void GetDamage(float damage)
@@ -72,18 +64,23 @@ public class BossDeadManager: MonoBehaviour
     {
         if (healt <= 0)
         {
-
             animator.SetTrigger("isDead");
             
             Destroy(gameObject,2.5f);
+            Invoke("TimeStop", 2);
+            
         }        
     }
 
-    
-
-    public void Attack()
+    public void TimeStop()
     {
+        Time.timeScale = 0;
         
+        FinishScreen.SetActive(true);                
+    }
+       
+    public void Attack()
+    {        
         Collider2D colInfo = Physics2D.OverlapCircle(attackPoint.position, attackRadius, attackMask);
 
         if (colInfo != null)

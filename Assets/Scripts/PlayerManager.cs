@@ -8,37 +8,25 @@ using UnityEngine.UI;
 public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager Instance;
-    public float healt, bulletSpeed;
-    
-    public static bool dead = false;
-
-    Transform muzzle;
-
     public Transform bullet, floatingText, bloodParticle;
     public Slider slider;
+    public static bool dead = false;
+    public float healt, bulletSpeed;
 
+    Transform muzzle;
     bool mouseIsNotOverUI;
+          
 
-    
-    
-
-    // Start is called before the first frame update
     void Start()
     {
         muzzle = transform.GetChild(1);
         slider.maxValue = healt;
         slider.value = healt;
-        
-        
+
+        dead = false;        
     }
+     
 
-    
-
-
-
-
-
-    // Update is called once per frame
     void Update()
     {
         // Bu kod maus UI elementinin üzerinde deðilse true döndürür
@@ -48,10 +36,7 @@ public class PlayerManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && mouseIsNotOverUI)
         {
             ShootBullet();
-        }
-
-        
-
+        }      
     }
 
     // Damage alma
@@ -77,12 +62,8 @@ public class PlayerManager : MonoBehaviour
         {
             dead = true;
             Destroy(Instantiate(bloodParticle, transform.position, Quaternion.identity),3f);
-            //DataManager.Instance.LoseProcess();
-            string currentSceneName = SceneManager.GetActiveScene().name;
-
             // Sahneyi yeniden yükle
-            SceneManager.LoadScene(currentSceneName);
-            //Invoke("ResetScene", 0.1f);
+            Invoke("ResetScene", 0.1f);
         }
     }
 

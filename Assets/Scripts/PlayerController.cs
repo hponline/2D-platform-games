@@ -1,27 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class PlayerController : MonoBehaviour
 {
     public GameObject playerPos;
     Rigidbody2D playerRb;
     Animator playerAnimator;
+
     public float moveSpeed = 1.0f;
     public float jumpSpeed = 1.0f, jumpFrequency = 1.0f ,nextJumpTime;
-
-
     bool facingRight = true;
     public bool isGround = false;
-
     public Transform groundCheckPosition;
     public float groundCheckRadius;
     public LayerMask groundCheckLayer;
 
     
-
-
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
@@ -49,13 +45,8 @@ public class PlayerController : MonoBehaviour
         {
             nextJumpTime = Time.timeSinceLevelLoad + jumpFrequency;
             jump();
-        }
-
-        
+        }        
     }
-
-    
-       
 
     // Yana hareket
     void HorizontalMove()
@@ -92,7 +83,6 @@ public class PlayerController : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().color = Color.green;
             Invoke("ColorClassic", 0.5f);
-
         }
     }
 
@@ -100,5 +90,4 @@ public class PlayerController : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().color = Color.white;
     }
-
 }
