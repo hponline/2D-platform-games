@@ -50,3 +50,15 @@ Teknik Özellikler ve İpuçları
 <li>Replay Butonu: Oyun durumunu sıfırlamak için yapıldı.</li>
 </ul>
 <h3>Bu döküman, oyunun genel yapısını, seviyelerini ve teknik özelliklerini özetlemektedir. Her seviyenin kendine özgü zorlukları ve mekanikleri vardır ve oyuncunun becerilerini geliştirerek ilerlemesi hedeflenir. Oyunun son seviyesinde, büyük boss savaşı ile oyuncunun tüm yeteneklerini test eden bir final sunulmaktadır.</h3>
+
+<hr>
+
+Görsel:
+
+![abc](https://github.com/hponline/2D-platform-games/assets/143675421/c2a444d9-e6b6-4b10-a82f-f6236408ed12)
+
+Video:
+
+https://github.com/hponline/2D-platform-games/assets/143675421/b2d84d5a-cd7b-4782-b876-8a2564e87650
+
+
