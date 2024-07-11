@@ -1,4 +1,4 @@
-<H2>Proje Sunumu: 3 Seviyeli Oyun</H2>
+<H2>Proje Sunumu: JellyJump</H2>
 <H3>Genel Bilgiler</H3>
 <H4>Oyun Türü: Platformer<H4>
 <ul>
@@ -29,7 +29,7 @@
 <li>Zorluk Derecesi: Zor</li>
 <li>Yeni Mekanikler ve Düşmanlar:</li>
 <li>Uçan Yarasalar: Oyuncuyu takip eden ve hareketlerini kısıtlayan düşmanlar</li>
-<li>Sümük Adamlar: Daha günçlü düşmanlar</li>
+<li>Sümük Adamlar: Daha güçlü düşmanlar</li>
 <li>Kasvetli Hava: Görsel olarak daha zorlayıcı bir atmosfer</li>
 <li>Tüm Önceki Tehlikeler: Hareketli platformlar, yukarıdan düşen dikenler ve farklı düşmanlar</li>
 <ul>Boss Savaşı:
@@ -43,7 +43,7 @@ Teknik Özellikler ve İpuçları
 <li>Oyun Yapımı: Unity Engine</li>
 <li>Karakter Kontrolleri: Klavye ve fare</li>
 <li>Düşman AI: Düşmanlar belirli hareket kalıplarına sahip ve oyuncunun hareketlerine göre tepki verir</li>
-<li>Oyun Müzikleri ve Ses Efektleri: Her seviyeye uygun müzik ve ses efektleri</li>
+
 <li>Geliştirme Notları</li>
 <li>Timer Yönetimi: Seviye geçişlerinde zamanlayıcıyı korumak için DontDestroyOnLoad kullanıldı.</li>
 <li>Sahne Yeniden Başlatma: Karakterin canı sıfırlandığında sahne yeniden başlatılır ve karakter StartPos konumunda yeniden başlatılır.</li>
