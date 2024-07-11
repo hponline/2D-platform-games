@@ -2433,6 +2433,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7182106661302279401, guid: e1b3db403f9b01d468056cfe7c9ddaab, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1628274688}
+    - targetCorrespondingSourceObject: {fileID: 7182106661302279401, guid: e1b3db403f9b01d468056cfe7c9ddaab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1628274689}
   m_SourcePrefab: {fileID: 100100000, guid: e1b3db403f9b01d468056cfe7c9ddaab, type: 3}
 --- !u!4 &318809249 stripped
 Transform:
@@ -8427,6 +8430,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7182106661302279401, guid: e1b3db403f9b01d468056cfe7c9ddaab, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1591351195}
+    - targetCorrespondingSourceObject: {fileID: 7182106661302279401, guid: e1b3db403f9b01d468056cfe7c9ddaab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1591351196}
   m_SourcePrefab: {fileID: 100100000, guid: e1b3db403f9b01d468056cfe7c9ddaab, type: 3}
 --- !u!1001 &990136236
 PrefabInstance:
@@ -9513,6 +9519,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7182106661302279401, guid: e1b3db403f9b01d468056cfe7c9ddaab, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1711135918}
+    - targetCorrespondingSourceObject: {fileID: 7182106661302279401, guid: e1b3db403f9b01d468056cfe7c9ddaab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1711135919}
   m_SourcePrefab: {fileID: 100100000, guid: e1b3db403f9b01d468056cfe7c9ddaab, type: 3}
 --- !u!1001 &1179369234
 PrefabInstance:
@@ -11869,6 +11878,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.28, y: 1.28}
   m_EdgeRadius: 0
+--- !u!114 &1591351196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575894890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6045f0a562eaaf1439ae6398782d0e65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnSpeed: -360
 --- !u!1001 &1601532480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12305,6 +12327,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.28, y: 1.28}
   m_EdgeRadius: 0
+--- !u!114 &1628274689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628274687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6045f0a562eaaf1439ae6398782d0e65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnSpeed: -360
 --- !u!1001 &1657753546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12734,6 +12769,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.28, y: 1.28}
   m_EdgeRadius: 0
+--- !u!114 &1711135919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711135917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6045f0a562eaaf1439ae6398782d0e65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnSpeed: -360
 --- !u!1 &1741272878
 GameObject:
   m_ObjectHideFlags: 0
@@ -13544,11 +13592,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 905209321479866154, guid: 2d4aac76ff92c8d48a25559fa1536932, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44.63
+      value: 44.18
       objectReference: {fileID: 0}
     - target: {fileID: 905209321479866154, guid: 2d4aac76ff92c8d48a25559fa1536932, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.4
+      value: -13.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015140425372858819, guid: 2d4aac76ff92c8d48a25559fa1536932, type: 3}
+      propertyPath: healt
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3127013617019565759, guid: 2d4aac76ff92c8d48a25559fa1536932, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16809,7 +16861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6837399604342185236, guid: bc8b93d156c51f142ac86bede6da0d1e, type: 3}
       propertyPath: healt
-      value: 100
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 6837399604342185236, guid: bc8b93d156c51f142ac86bede6da0d1e, type: 3}
       propertyPath: FinishScreen
