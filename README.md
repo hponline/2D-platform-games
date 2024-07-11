@@ -1,4 +1,5 @@
 <H2>Proje Sunumu: JellyJump</H2>
+<h3>Oynamak için >>> https://hponline.itch.io/jellyjump </h3> 
 <H3>Genel Bilgiler</H3>
 <H4>Oyun Türü: Platformer<H4>
 <ul>
@@ -7,7 +8,7 @@
 <li>Düşman Türleri: Sabit düşmanlar, hareketli platformlar, yukarıdan düşen dikenler, uçan yarasalar, sümük adamlar</li>
 <li>Boss: Büyük bir boss, yürüme, atak ve ölüm animasyonlarına sahip</li>
 </ul>
-  
+
 <H4>Seviye 1: Başlangıç Seviyesi<H4>
 <ul>
 <li>Zorluk Derecesi: Kolay</li>
